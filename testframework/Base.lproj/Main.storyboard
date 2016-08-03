@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7VJ-HT-sRo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Watch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Watch" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNa-PL-QxK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="138" width="293" height="19"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZNa-PL-QxK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZNa-PL-QxK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="播放" id="4Gd-AT-ukd"/>
+                    <connections>
+                        <outlet property="myLabel" destination="ZNa-PL-QxK" id="4g8-1d-f4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632.5" y="-641"/>
+        </scene>
+        <!--大厅-->
+        <scene sceneID="f0f-so-Rrp">
+            <objects>
+                <navigationController id="EDq-w1-ueX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="大厅" id="3Cc-cs-ESG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cq5-gO-Ueb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="spg-8L-0Fv" kind="relationship" relationship="rootViewController" id="uJl-Vw-jyp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbf-Zx-8aJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268.5" y="-1326"/>
+        </scene>
+        <!--Da Ting View Controller-->
+        <scene sceneID="eXb-Cd-YRt">
+            <objects>
+                <viewController id="spg-8L-0Fv" customClass="DaTingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IRc-ti-eBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="RZl-HJ-FMw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="af3-xy-TJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-KC-FfY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="38" y="131" width="329" height="368"/>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bXS-KC-FfY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bXS-KC-FfY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="sFn-Tq-h3w">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="8k3-tG-5UD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="i6C-jr-Nft">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="MxQ-AH-jxC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myNavigationItem" destination="sFn-Tq-h3w" id="Vi8-jW-vid"/>
+                        <outlet property="myScrollView" destination="bXS-KC-FfY" id="qlp-DK-IWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BU-c5-8zR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585.5" y="-920"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="OOE-RM-l59">
+            <objects>
+                <viewController title="Profile" id="ncG-tz-kQq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ja9-DA-cQY"/>
+                        <viewControllerLayoutGuide type="bottom" id="A68-ab-amc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oWf-Ap-2Uv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="profile page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4L-dp-DtO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="79" width="193" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="q4L-dp-DtO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="q4L-dp-DtO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="4WN-fh-U10"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ct0-dw-A8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493.5" y="377"/>
+        </scene>
+        <!--直播-->
+        <scene sceneID="zQy-U0-8Gg">
+            <objects>
+                <viewController id="eJ2-0P-uHs" userLabel="直播" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hzH-ww-Idu"/>
+                        <viewControllerLayoutGuide type="bottom" id="bCh-Ab-g3i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4E0-v5-09u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进入直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmG-NR-bYK">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="109" width="166" height="40"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FmG-NR-bYK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FmG-NR-bYK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="giftbtn.png" id="8BH-fC-iel"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4D-Sh-R3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.5" y="-470"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2yu-E0-TFj">
+            <objects>
+                <tabBarController id="7VJ-HT-sRo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aRb-8Y-chA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EDq-w1-ueX" kind="relationship" relationship="viewControllers" id="giU-kH-RqF"/>
+                        <segue destination="eJ2-0P-uHs" kind="relationship" relationship="viewControllers" id="8Km-Sk-Cga"/>
+                        <segue destination="ncG-tz-kQq" kind="relationship" relationship="viewControllers" id="IaZ-Eq-CGw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gea-6b-SgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1129.5" y="-71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="giftbtn.png" width="128" height="128"/>
+    </resources>
+</document>
